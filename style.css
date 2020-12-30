@@ -68,7 +68,7 @@ p {
     opacity: 90%;
 }
 
-.about, .shop, .blog, .contact {
+.about, .shop, .blog, .contact, .promo-images {
     background-color: #eeeeee;
     opacity: 75%;
     width: 90%;
@@ -139,6 +139,19 @@ li.social-link a {
 li.social-link a:hover {
     color: #d72323;
     background-color: #eeeeee;
+}
+
+.promo-images {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.homepage-img {
+    width: auto;
+    max-height: 200px;
 }
 
 button {

@@ -27,6 +27,7 @@ function getShopAbout() {
 
 function displayAbout(responseJson) {
     console.log("displaying about");
+    console.log(responseJson);
     $(".about").append(`
     <h1>${responseJson.results[0].story_headline}</h1>
     <p>${responseJson.results[0].story}</p>
