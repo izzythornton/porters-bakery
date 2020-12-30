@@ -68,11 +68,12 @@ p {
     opacity: 90%;
 }
 
-.about, .shop, .blog, .reviews {
+.about, .shop, .blog, .contact {
     background-color: #eeeeee;
     opacity: 75%;
     width: 90%;
     margin-top: 10px;
+    padding-bottom: 20px;
 }
 
 .shop {
@@ -94,13 +95,14 @@ li.shop-item {
 
 li.title {
     color: #d72323;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bolder;
     padding: 10px;
 }
 
 li.description {
     padding: 10px;
+    font-size: 14px;
 }
 
 li.listing-img {
@@ -111,6 +113,32 @@ li.details {
     font-size: 20px;
     font-weight: bolder;
     margin-bottom: 20px;
+}
+
+ul.socials {
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+li.social-link {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+li.social-link a {
+    display: block;
+    color: black;
+    padding: 4px;
+    text-decoration: none;
+}
+
+li.social-link a:hover {
+    color: #d72323;
+    background-color: #eeeeee;
 }
 
 button {
@@ -169,6 +197,18 @@ button a:hover {
         color: #d72323;
         background-color: #eeeeee;
         font-weight: bolder;
+    }
+
+    li.title {
+        font-size: 24px;
+    }
+
+    li.description {
+        font-size: 16px;
+    }
+
+    li.details {
+        font-size: 20px;
     }
 
     .small-header {
