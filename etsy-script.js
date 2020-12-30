@@ -76,10 +76,11 @@ function getImgListingUrls(listingId, listings) {
                 console.log(responseJson.results[i].listing_image_id);
                 listingImgUrls.push(responseJson.results[i].listing_image_id);
             })
-            .catch(err => {
+            .catch (err => {
                 $("#js-error-message").text(`Uh oh! Something unexpected happened: ${err.message}`);
             })
     }
+    console.log(listingImgUrls);
     displayListings(listings, listingImgUrls);
 }
 
