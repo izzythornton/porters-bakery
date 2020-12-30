@@ -12,7 +12,7 @@ const shopId = "26533762";
 
 function findAllShopListingsActive() {
     console.log("finding listings");
-    fetch("https://openapi.etsy.com/v2/shops/" + shopId + "/listings/active?includes=Images&api_key=" + apiKey)
+    fetch("https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/" + shopId + "/listings/active?includes=Images&api_key=" + apiKey)
         .then (response => {
             if (response.ok) {
                 return response.json();
@@ -32,10 +32,11 @@ function displayListings(responseJson) {
     for (let i = 0; i < responseJson.results.length && i < 10; i++) {
         console.log(responseJson.results[i]);
         $(".shop").prepend(`
-        <ul>
-            <li class="shop-item"<h3>${responseJson.results[i].title}</h3></li>
+        <ul class="shop-flex-container">
+            <li class="shop-item"><h3>${responseJson.results[i].title}</h3></li>
+            <li class="shop-item"><h4>${responseJson.results[i].description}</h4>
             <li class="shop-item"><img src=${responseJson.results[i].Images[0].url_170x135}></img></li>
-            <li class="shop-item"><p>$${responseJson.results[i].price} for ${responseJson.results[i].quantity} treats</p></li>
+            <li class="shop-item">$${responseJson.results[i].price} for ${responseJson.results[i].quantity} treats</li>
             <li class="shop-item"><button type="button"><a href="${responseJson.results[i].url}">Purchase on Etsy</a></button></li>
         </ul>
         `)};

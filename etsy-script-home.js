@@ -12,7 +12,7 @@ const shopId = "26533762";
 
 function getShopAbout() {
     console.log("loading about");
-    fetch("https://openapi.etsy.com/v2/shops/" + shopId + "/about?api_key=" + apiKey)
+    fetch("https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/" + shopId + "/about?api_key=" + apiKey)
         .then (response => {
             if (response.ok) {
                 return response.json();
