@@ -1,0 +1,159 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+html {
+    background-image: url(images/woofles-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: #d72323;
+}
+
+li a {
+    display: block;
+    color: #eeeeee;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+li a:hover {
+    color: black;
+    background-color: #eeeeee;
+}
+
+li .active {
+    color: #d72323;
+    background-color: #eeeeee;
+    font-weight: bolder;
+}
+
+h1 {
+    color: #3a4750;
+    padding: 10px;
+    font-size: 24px;
+}
+
+p {
+    padding: 10px;
+}
+
+.header-img {
+    align-items: center;
+}
+
+.shop-flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.shop-items {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#blog-post-title {
+    color: #3a4750;
+    text-decoration: none;
+    text-align: left;
+    background-color: #d5d5d5;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    opacity: 90%;
+}
+
+.about, .shop, .blog, .reviews {
+    background-color: #eeeeee;
+    opacity: 75%;
+    width: 90%;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        width: 75%;
+        margin: auto;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        overflow: hidden;
+        background-color: #d72323;
+    }
+    
+    li a {
+        display: block;
+        float: left;
+        color: #eeeeee;
+        padding: 15px;
+        border-right: 3px solid #eeeeee;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+    
+    li a:hover {
+        color: black;
+        background-color: #eeeeee;
+    }
+    
+    li .active {
+        color: #d72323;
+        background-color: #eeeeee;
+        font-weight: bolder;
+    }
+
+    .small-header {
+        display: none;
+    }
+
+    .shop-flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    
+    .shop-items {
+        width: 200px;
+        height: auto;
+    }
+
+    ul .shop-item {
+        list-style-type: none;
+        background-color: #3a4750;
+    }
+
+    li a .shop-item {
+        color: #eeeeee;
+        text-decoration: none;
+    }
+
+}
+
+@media only screen and (max-width: 699px) {
+    .large-header {
+        display: none;
+    }
+}
