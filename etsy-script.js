@@ -62,11 +62,9 @@ function findAllShopListingsActive() {
 
 function getImgListingUrls(listingId, listings) {
     console.log("finding img urls")
-    console.log(listings);
-    console.log(listingId);
     const listingImgUrls = [];
-    for (let x = 0; x < listingId.results.length; x++) {
-        return fetch("https://openapi.etsy.com/v2/listings/" + listingId[x] + "/images?api_key=" + apiKey)
+    for (let i = 0; i < listings.length; i++) {
+        fetch("https://openapi.etsy.com/v2/listings/" + listingId[i] + "/images?api_key=" + apiKey)
             .then (response => {
                 if (response.ok) {
                     return response.json();
@@ -75,15 +73,14 @@ function getImgListingUrls(listingId, listings) {
             })
             .then (responseJson => {
                 console.log(responseJson);
-                for (let i = 0; i < listingId.results.length; i++) {
-                    listingImgUrls.unshift(responseJson.results[i].url_170x135);
-                }
-                return listingImgUrls;
+                console.log(responseJson.results[i].listing_image_id);
+                listingImgUrls.push(responseJson.results[i].listing_image_id);
             })
             .catch(err => {
                 $("#js-error-message").text(`Uh oh! Something unexpected happened: ${err.message}`);
             })
     }
+    displayListings(listings, listingImgUrls);
 }
 
 
@@ -96,7 +93,7 @@ function displayListings(listings, listingImgUrls) {
             <div class="shop-flex-container">
             <ul class="shop-items">
                 <li class="shop-item"><h3>${listings[i].title}</h3></li>
-                <li class="shop-item"><img src="${listings[i].img}"></li>
+                <li class="shop-item"><img src="${listingImgUrls[i]}"></li>
                 <li class="shop-item"><h4>Price: $${listings[i].price} | Quantity: ${listings[i].quantity} treats</h4></li>
                 <li class="shop-item">${listings[i].description}</li>
                 <li class="shop-item"><a href="${listings[i].url}"><button type="button">Purchase On Etsy</button></a></li>
