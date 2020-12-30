@@ -18,27 +18,26 @@ main {
     margin-bottom: 20px;
 }
 
-ul {
+ul.nav-list {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
     background-color: #d72323;
 }
 
-li a {
+li.nav-item a {
     display: block;
     color: #eeeeee;
     padding: 4px;
     text-decoration: none;
     font-size: 12px;
 }
-
-li a:hover {
+li.nav-item a:hover {
     color: black;
     background-color: #eeeeee;
 }
 
-li .active {
+li.nav-item .active {
     color: #d72323;
     background-color: #eeeeee;
     font-weight: bolder;
@@ -56,40 +55,6 @@ p {
 
 .header-img {
     align-items: center;
-}
-
-.shop-item {
-    width: 200px;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    background-color: #d72323;
-}
-
-li a .shop-item {
-    display: block;
-    color: #9e2b7c;
-    padding: 4px;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-li a:hover .shop-item {
-    color:#9e2b7c;
-    background-color: #eeeeee;
-}
-
-li .active .shop-item {
-    color: #d72323;
-    background-color: #eeeeee;
-    font-weight: bolder;
 }
 
 #blog-post-title {
@@ -110,20 +75,69 @@ li .active .shop-item {
     margin-top: 10px;
 }
 
+.shop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.shop-list {
+    list-style-type: none;
+    padding: 20px;
+}
+
+li.shop-item {
+    width: 400px;
+    height: auto;
+}
+
+li.title {
+    color: #d72323;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+li.description {
+    padding: 10px;
+}
+
+li.listing-img {
+    padding: 10px;
+}
+
+li.details {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3a4750;
+    border: 1px solid;
+    color: #eeeeee;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 700px) {
     body {
         width: 75%;
         margin: auto;
     }
 
-    ul {
+    ul.nav-list {
         list-style-type: none;
         padding: 0px;
         overflow: hidden;
         background-color: #d72323;
     }
     
-    li a {
+    li.nav-item a {
         display: block;
         float: left;
         color: #eeeeee;
@@ -133,12 +147,12 @@ li .active .shop-item {
         transition: all .2s linear;
     }
     
-    li a:hover {
+    li.nav-item a:hover {
         color: black;
         background-color: #eeeeee;
     }
     
-    li .active {
+    li.nav-item .active {
         color: #d72323;
         background-color: #eeeeee;
         font-weight: bolder;

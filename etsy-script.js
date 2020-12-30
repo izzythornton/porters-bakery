@@ -32,12 +32,12 @@ function displayListings(responseJson) {
     for (let i = 0; i < responseJson.results.length && i < 10; i++) {
         console.log(responseJson.results[i]);
         $(".shop").prepend(`
-        <ul class="shop-flex-container">
-            <li class="shop-item"><h3>${responseJson.results[i].title}</h3></li>
-            <li class="shop-item"><h4>${responseJson.results[i].description}</h4>
-            <li class="shop-item"><img src=${responseJson.results[i].Images[0].url_170x135}></img></li>
-            <li class="shop-item">$${responseJson.results[i].price} for ${responseJson.results[i].quantity} treats</li>
-            <li class="shop-item"><button type="button"><a href="${responseJson.results[i].url}">Purchase on Etsy</a></button></li>
+        <ul class="shop-list">
+            <li class="shop-item title">${responseJson.results[i].title}</li>
+            <li class="shop-item description">${responseJson.results[i].description}</li>
+            <li class="shop-item listing-img"><img src=${responseJson.results[i].Images[0].url_170x135}></img></li>
+            <li class="shop-item details">$${responseJson.results[i].price} for ${responseJson.results[i].quantity} treats</li>
+            <li class="shop-item button"><button type="button"><a href="${responseJson.results[i].url}">Purchase on Etsy</a></button></li>
         </ul>
         `)};
 }
