@@ -18,6 +18,18 @@ main {
     margin-bottom: 20px;
 }
 
+h1 {
+    color: #3a4750;
+    padding: 10px;
+    font-size: 24px;
+}
+
+p {
+    padding: 10px;
+}
+
+/* NAVIGATION STYLING */
+
 ul.nav-list {
     list-style-type: none;
     margin: 0px;
@@ -43,15 +55,7 @@ li.nav-item .active {
     font-weight: bolder;
 }
 
-h1 {
-    color: #3a4750;
-    padding: 10px;
-    font-size: 24px;
-}
-
-p {
-    padding: 10px;
-}
+/* OTHER GENERAL STYLING */
 
 .header-img {
     align-items: center;
@@ -82,6 +86,8 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+/* SHOP ITEMS STYLING */
 
 ul.shop-list {
     list-style-type: none;
@@ -141,6 +147,8 @@ li.social-link a:hover {
     background-color: #eeeeee;
 }
 
+/* HOMEPAGE IMAGE STYLING */
+
 .promo-images {
     display: flex;
     flex-flow: row wrap;
@@ -153,6 +161,8 @@ li.social-link a:hover {
     width: auto;
     max-height: 200px;
 }
+
+/* BUTTON STYLING FOR SHOP PAGE */
 
 button {
     background-color: #d5d5d5;
@@ -177,6 +187,8 @@ button a {
 button a:hover {
     color: #d72323;
 }
+
+/* UPDATED CODE ON LARGE SCREENS */
 
 @media only screen and (min-width: 700px) {
     body {
@@ -235,6 +247,8 @@ button a:hover {
     }
 
 }
+
+/* GENERATES DIFFERENT HEADER IMAGE ON LARGE SCREENS */
 
 @media only screen and (max-width: 699px) {
     .large-header {

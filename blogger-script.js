@@ -30,4 +30,5 @@ function getBlogPosts() {
         })
 }
 
+// This prompts the page to immediately load blog posts via getBlogPosts, which will then render them in the page using displayBlogPosts
 $(getBlogPosts);

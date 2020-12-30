@@ -10,6 +10,7 @@ const shopId = "26533762";
 
 /* SHOP FUNCTIONS */
 
+// This searches the identified Etsy shop for every active listing (to leave out anything inactive). It adds additional data to the API call, images, to fully render the content.
 function findAllShopListingsActive() {
     console.log("finding listings");
     fetch("https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/" + shopId + "/listings/active?includes=Images&api_key=" + apiKey)
@@ -25,12 +26,10 @@ function findAllShopListingsActive() {
     })
 }
 
-
+// This displays listings with the data found in the previous API call, findAllShopListingsActive.
 function displayListings(responseJson) {
     console.log("displaying listings");
-    console.log(responseJson);
     for (let i = 0; i < responseJson.results.length && i < 10; i++) {
-        console.log(responseJson.results[i]);
         $(".shop").prepend(`
         <ul class="shop-list">
             <li class="shop-item title">${responseJson.results[i].title}</li>
@@ -42,4 +41,5 @@ function displayListings(responseJson) {
         `)};
 }
 
+// This starts rendering the page by immediately running findAllShopListingsActive, which will then run displayListings.
 $(findAllShopListingsActive);

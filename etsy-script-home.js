@@ -10,6 +10,7 @@ const shopId = "26533762";
 
 /* INDEX FUNCTIONS */
 
+// Pull the "about" data for the shop identified with the shopId variable
 function getShopAbout() {
     console.log("loading about");
     fetch("https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/" + shopId + "/about?api_key=" + apiKey)
@@ -25,6 +26,7 @@ function getShopAbout() {
     });
 }
 
+// Display the "about" data fetched in the getShopAbout function
 function displayAbout(responseJson) {
     console.log("displaying about");
     console.log(responseJson);
@@ -34,4 +36,5 @@ function displayAbout(responseJson) {
     `)
 }
 
+// This starts rendering the page by immediately running getShopAbout, which will then run displayAbout.
 $(getShopAbout);
