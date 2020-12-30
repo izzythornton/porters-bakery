@@ -1,0 +1,243 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+html {
+    background-image: url(images/woofles-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+ul.nav-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: #d72323;
+}
+
+li.nav-item a {
+    display: block;
+    color: #eeeeee;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 12px;
+}
+li.nav-item a:hover {
+    color: black;
+    background-color: #eeeeee;
+}
+
+li.nav-item .active {
+    color: #d72323;
+    background-color: #eeeeee;
+    font-weight: bolder;
+}
+
+h1 {
+    color: #3a4750;
+    padding: 10px;
+    font-size: 24px;
+}
+
+p {
+    padding: 10px;
+}
+
+.header-img {
+    align-items: center;
+}
+
+#blog-post-title {
+    color: #3a4750;
+    text-decoration: none;
+    text-align: left;
+    background-color: #d5d5d5;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    opacity: 90%;
+}
+
+.about, .shop, .blog, .contact, .promo-images {
+    background-color: #eeeeee;
+    opacity: 75%;
+    width: 90%;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.shop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.shop-list {
+    list-style-type: none;
+    padding: 20px;
+}
+
+li.shop-item {
+    width: 400px;
+    height: auto;
+}
+
+li.title {
+    color: #d72323;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+li.description {
+    padding: 10px;
+    font-size: 14px;
+}
+
+li.listing-img {
+    padding: 10px;
+}
+
+li.details {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+ul.socials {
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+li.social-link {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+li.social-link a {
+    display: block;
+    color: black;
+    padding: 4px;
+    text-decoration: none;
+}
+
+li.social-link a:hover {
+    color: #d72323;
+    background-color: #eeeeee;
+}
+
+.promo-images {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.homepage-img {
+    width: auto;
+    max-height: 200px;
+}
+
+button {
+    background-color: #d5d5d5;
+    border: 2px solid #3a4750;
+    color: #eeeeee;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+button a {
+    color: black;
+    font-weight: bolder;
+    padding: 15px;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+button a:hover {
+    color: #d72323;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        width: 75%;
+        margin: auto;
+    }
+
+    ul.nav-list {
+        list-style-type: none;
+        padding: 0px;
+        overflow: hidden;
+        background-color: #d72323;
+    }
+    
+    li.nav-item a {
+        display: block;
+        float: left;
+        color: #eeeeee;
+        padding: 15px;
+        border-right: 3px solid #eeeeee;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+    
+    li.nav-item a:hover {
+        color: black;
+        background-color: #eeeeee;
+    }
+    
+    li.nav-item .active {
+        color: #d72323;
+        background-color: #eeeeee;
+        font-weight: bolder;
+    }
+
+    li.title {
+        font-size: 24px;
+    }
+
+    li.description {
+        font-size: 16px;
+    }
+
+    li.details {
+        font-size: 20px;
+    }
+
+    .small-header {
+        display: none;
+    }
+
+    .shop-flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+}
+
+@media only screen and (max-width: 699px) {
+    .large-header {
+        display: none;
+    }
+}
